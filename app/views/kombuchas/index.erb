@@ -1,0 +1,10 @@
+<h2><%= @brand ? "All Kombuchas for " + @brand.name : "Kombuchas Index!" %></h2>
+
+<ul>
+  <% @kombuchas.each do |k| %>
+    <li><%= link_to "#{k.flavor}!", brand_kombucha_path(k.brand.id, k) %></li>
+  <% end %>
+</ul>
+
+<br>
+<br>

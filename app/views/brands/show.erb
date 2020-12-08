@@ -1,0 +1,8 @@
+<h2><%= @brand.name %></h2>
+
+<p>This could be a potential show page for a brand; it shows all of the kombuchas that belong to it. HOWEVER this could also be considered an index route for kombuchas, but kombuchas from a specific brand</p>
+<ul>
+<% @brand.kombuchas.each do |kombucha| %>
+  <li><%= kombucha.flavor %></li>
+<% end %>
+</ul>
